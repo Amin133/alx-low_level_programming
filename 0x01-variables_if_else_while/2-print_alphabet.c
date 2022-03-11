@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
  */
 
-int main(viod)
+int main(void)
 {
 	int i = 97;
 
@@ -17,7 +17,7 @@ int main(viod)
 		putchar(i);
 		i++;
 	}
-	puchar(10);
+	putchar(10);
 
 	return (0);
 }
