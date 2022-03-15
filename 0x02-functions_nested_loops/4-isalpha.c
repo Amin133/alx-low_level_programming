@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * _isalpha - checks for alphabetic character
- * 
- * @c: c check alphabetic character
- * 
+ * _isalpha - checks for alphabetic character 
+ * @c: c check alphabetic character 
  * main - check alphabet
- *
  * Return: 1 (if success)
  */
 
