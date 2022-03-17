@@ -1,21 +1,17 @@
 #include "main.h"
 
 /**
- * more_numbers - print all numbers 0 through 14 ten tiems
+ * print_most_numbers - print all numbers 0 through 9 but no 2&4 and then \n
  */
 
-void more_numbers(void)
+void print_most_numbers(void)
 {
-	int j;
-	int k;
-for (x = 0; x < 10; x++)
-	{
-	for (j = 0; j <= 14; j++)
-	{
-	if (j > 9)
-	_putchar((j / 10) + '0');
-	_putchar((j % 10) + '0');
-	}
-	_putchar('\n');
-	}
+int i;
+for (i = '0'; i <= '9'; i++)
+{
+if (i == '2' || i == '4')
+continue;
+_putchar(i);
+}
+_putchar('\n');
 }
