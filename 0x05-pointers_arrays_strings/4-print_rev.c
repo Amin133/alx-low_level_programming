@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev - prints string reverse
+ * print_rev - prints string revers
  * @s: string
  * Return: void
  */
