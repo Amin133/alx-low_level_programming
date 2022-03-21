@@ -1,8 +1,6 @@
 #include "main.h"
 
 /**
- * main - pointer to int
- *
  * reset_to_98 - pointer to int and update to 98
  * @n: pointer
  * Return: Always 0 (success)
