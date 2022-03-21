@@ -1,21 +1,18 @@
 #include "main.h"
 
 /**
- * _puts - print a string
- * @str: string
- * Return: void
- */
+* _puts - print string reverse
+* @str: pointer to string
+* Return: void
+**/
 
 void _puts(char *str)
 {
-	int i;
 
-	i = 0;
-
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
