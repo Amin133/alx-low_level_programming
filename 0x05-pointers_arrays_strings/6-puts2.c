@@ -6,21 +6,16 @@
  * Return: void
  */
 
-void puts_half(char *str)
+void puts2(char *str)
 {
-	int a, b, max;
+	int a;
 
 	a = 0;
 	while (str[a] != '\0')
 	{
+		if (a % 2 == 0)
+			_putchar(str[a]);
 		a++;
-	}
-	max = a;
-	b= max / 2;
-	while (b<= max)
-	{
-		_putchar(str[b]);
-		b++;
 	}
 	_putchar('\n');
 }
