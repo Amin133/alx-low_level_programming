@@ -6,7 +6,7 @@
  * @b: integer
  * Return: Always 0 (success)
  */
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
 	int a;
 	int b;
