@@ -5,34 +5,29 @@
  * @n: is a int number
  * Return: Always 0.
  */
+
 void print_number(int n)
 {
-int cont = 1, num = n;
+	int count, y, k;
 
-if (n < 0)
-_putchar('-');
+	y = 1000000000;
 
-while (num / 10 != 0)
-{
-cont = cont * 10;
-num = num / 10;
-}
-
-while ((n / cont != 0) && (cont != 1))
-{
-_putchar(abs((n / cont)) + '0');
-
-n = n % cont;
-
-if (cont > 1)
-cont = cont / 10;
-
-while ((abs(n) < cont) &&(cont > 1))
-{
-_putchar('0');
-cont = cont / 10;
-}
-}
-
-_putchar(abs(n) + '0');
+	if (n == 0)
+		_putchar('0');
+	else if (n > 0)
+		n *= -1;
+	else
+		_putchar('-');
+	for (count = 0; count < 10; count++, y /= 10)
+	{
+		if (n / y == 0)
+			continue;
+		else
+		{
+			k = (-(n / y) % 10);
+			if (k < 0)
+				k *= -1;
+			_putchar(k + '0');
+		}
+	}
 }
