@@ -7,16 +7,25 @@
  * Return: Always 0.
  */
 
-void print_chessboard(char (*a)[8])
+void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int i, j = 0, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(*(*(i + a) + j));
-		}
-	_putchar('\n');
+		sum1 += a[j];
+		j += size + 1;
 	}
+
+		j = 0;
+
+		j = size - 1;
+
+	for (i = 0; i < size; i++)
+	{
+		sum2 += a[j];
+		j += size - 1;
+	}
+
+	printf("%d, %d\n", sum1, sum2);
 }
