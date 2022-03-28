@@ -1,39 +1,28 @@
 #include "main.h"
 
 /**
- * _strspn - locates a character in a string
+ * _strspn - function that gets the length of a prefix substring
  * @s: is a pointer type char
  * @accept: is a pointer type char
  * Return: The number of bytes repeated
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, num = 0, cont = 0;
+	unsigned int c = 0;
+	char *t = accept;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s++)
 	{
-
-	for (j = 0; accept[j] != '\0'; j++)
-	{
-	if (s[i] != accept[j])
-		continue;
-
-	else
-	{
-		num++;
-		break;
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
+			{
+				c++;
+				break;
+			}
+		if (!(*--accept))
+			break;
+		accept = t;
 	}
-	}
-
-	for (j = 0; accept[j] != '\0'; j++)
-	if (num != 0 && s[i + 1] != accept[j])
-		cont++;
-
-	if (cont == j)
-		break;
-
-		cont = 0;
-	}
-
-	return (num);
+	return (c);
 }
