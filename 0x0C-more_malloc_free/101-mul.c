@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-include <ctype.h>
+#include <ctype.h>
 
 /**
  * _is_zero - determines if any number is zero
