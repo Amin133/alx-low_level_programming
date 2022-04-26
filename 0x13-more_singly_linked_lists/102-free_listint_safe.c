@@ -32,18 +32,5 @@ size_t free_listint_safe(listint_t **h)
 			if (fast == *h)
 				flag = 1;
 		}
-		delete = *h;
-		*h = (**h).next;
-		free(delete);
 	}
-
-	while (flag && *h != fast)
-	{
-		delete = *h;
-		i++;
-		*h = (**h).next;
-		free(delete);
-	}
-	*h = NULL;
-	return (i);
 }
