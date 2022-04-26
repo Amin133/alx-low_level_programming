@@ -13,11 +13,11 @@ void free_listint(listint_t *head)
 {
 	listint_t *camp;
 
-	camp = head;
-	while (camp != NULL)
+	while (head)
 	{
-		camp = temp->next;
-		free(head);
-		head = camp;
+		camp = head;
+		head = head->next;
+		free(camp);
 	}
+	free(head);
 }
